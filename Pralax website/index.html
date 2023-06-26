@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Paralax website</title>
+  </head>
+  <body>
+    <header>
+      <a href="#" class="logo">Logo</a>
+      <ul>
+        <li><a href="#" class="active">Home</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Work</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </header>
+    <section>
+      <img src="stars.png" id="stars" />
+      <img src="moon.png" id="moon" />
+      <h2 id="text">Moon Light</h2>
+      <a href="https://moon.io/" class="btn">Explore</a>
+      <img src="mountains_behind.png" id="mountains_behind" />
+      <img src="mountains_front.png" id="mountains_front" />
+    </section>
+    <div class="sec">
+      <h2>Paralax Scrolling Effect</h2>
+      <p>
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aliquid,
+        obcaecati qui quaerat commodi accusantium molestias culpa, voluptatibus
+        officiis voluptatum ipsum laudantium quisquam voluptate dolorum iure
+        libero at aspernatur! Officiis corrupti a ea reprehenderit dolor.
+        Doloribus, perferendis, dolores at deleniti assumenda illo laborum,
+        placeat quisquam tenetur voluptatem in tempora nam mollitia asperiores
+        aperiam error officiis ut expedita temporibus. Nam libero ut quae
+        quibusdam itaque sapiente quasi officia animi. Obcaecati inventore
+        consectetur iure. Omnis voluptate nobis culpa illum! Quia, vel ex
+        aspernatur cum consequuntur ipsa accusantium quae inventore nisi
+        perspiciatis illum  <br> 
+        <br>
+        incidunt debitis exercitationem consequatur rem
+        libero placeat distinctio blanditiis vero architecto voluptates atque
+        similique? Atque excepturi minus non impedit itaque dicta sit. Sed quis
+        amet ab, fugiat maxime vel atque. Quis adipisci aperiam enim placeat
+        eligendi, atque reprehenderit cupiditate sed nihil hic nulla. Tenetur,
+        debitis dignissimos? Deserunt delectus, nulla voluptatum, dicta sapiente
+        itaque officiis, error odit distinctio laboriosam libero. Excepturi quos
+        molestiae quo, incidunt, cupiditate exercitationem enim ex ipsum
+        voluptatum obcaecati dolorem minus iusto laboriosam officia ea eius
+        sunt aspernatur molestias voluptates quam nemo modi voluptatum deserunt,
+        consequatur nihil quis nam magnam esse atque reprehenderit porro!
+        Consequatur numquam possimus cumque tenetur fugit. Cum doloribus dolorem
+        quo tempora ea nihil voluptatum fugiat. Facilis in distinctio illum eius
+        voluptate. Perspiciatis aliquid hic minima, explicabo ipsam pariatur
+        maiores aspernatur aliquam, esse tempore cupiditate nulla obcaecati quia
+        molestiae sit possimus? Quae dolorem nesciunt fugiat minima at. Illo,
+        officia. Consequatur optio asperiores vel aliquam? Nulla labore ad
+        consequuntur sunt incidunt, cumque illo ullam. Quidem nostrum temporibus
+        itaque  <br>
+        <br> aliquid vero? A maiores accusamus dolores quia
+        doloremque modi provident? Natus quasi nesciunt nisi eos, esse voluptate
+        iste corporis eaque. Iste perspiciatis eius, odit saepe officiis
+        provident, aliquam debitis exercitationem eos fuga, autem asperiores
+        aperiam. Atque quisquam vitae mollitia natus nam nemo voluptatibus,
+        voluptate earum aliquid sed exercitationem dolorem magnam cum vero
+        impedit! Recusandae quia voluptate voluptates voluptatibus expedita
+        reprehenderit accusantium cum est quaerat, quam quasi, perspiciatis
+        adipisci deserunt doloremque! Eaque fugiat ex reprehenderit iste ullam.
+        Cum quas tempora tempore doloremque quam, corrupti asperiores facere
+        quae reiciendis saepe ducimus repudiandae consectetur minus dolores
+        delectus odit debitis eligendi quo reprehenderit. Dolorem cumque fuga
+        tenetur obcaecati repudiandae eos similique modi porro unde ullam
+        aliquam ipsum, aliquid quam quisquam illo ex esse rerum voluptate
+        expedita? Deserunt sapiente aperiam sit officia quod omnis adipisci enim
+        excepturi nulla? Culpa porro dolor sed ipsa, qui autem dolores? Ut
+        facere velit ipsa quod.
+      </p>
+    </div>
+    <script>
+        let stars = document.getElementById('stars');
+        let moon = document.getElementById('moon');
+        let mountains_behind = document.getElementById('mountains_behind');
+        let text = document.getElementById("text");
+        let btn = document.getElementById("btn");
+        let mountains_front = document.getElementById('mountains_front');
+        let header = document.querySelector('header');
+
+        window.addEventListener('scroll', function(){
+            let value = window.scrollY;
+            stars.style.left = value*0.25 + "px";
+            moon.style.top = value*1.05 + "px";
+            mountains_front.style.top = value*0 + "px";
+            mountains_behind.style.top = value*0.5 + "px";
+            text.style.marginRight=value*4 + "px";
+            text.style.marginTop=value*1.5 + "px";
+            btn.style.marginTop = value*1.5 + "px";
+            header.style.top=value*0.5 + "px";
+
+        })
+
+    </script>
+     
+  </body>
+</html>l
